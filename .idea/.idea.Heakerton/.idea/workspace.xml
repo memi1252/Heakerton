@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ae89254-f282-4768-bd1c-23510a076ace" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heakerton/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heakerton/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ProductionMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ProductionMachine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/image/ingredient2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/image/ingredient2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/image/ingredient3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/image/ingredient3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/image/settlebutton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/image/settlebutton.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/ProductionMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ProductionMachine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

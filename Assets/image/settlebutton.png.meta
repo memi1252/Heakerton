@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      settlebutton_0: -7322683824817993372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -75,6 +75,27 @@ public class ProductionMachine : MonoBehaviour
         motorCountText.text = motorCount.ToString();
         ElectricWireCountText.text = ElectricWireCount.ToString();
         filterCountText.text = filterCount.ToString();
+        
+        if (Mathf.Approximately(transform.rotation.eulerAngles.z, 0))
+        {
+            ItemSelect.transform.localPosition = new Vector3(1.5f, 0, 0);
+            ItemSelect.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (Mathf.Approximately(transform.rotation.eulerAngles.z, 90))
+        {
+            ItemSelect.transform.localPosition = new Vector3(0, -1.5f, 0);
+            ItemSelect.transform.localRotation = Quaternion.Euler(0, 0, -90);
+        }
+        else if (Mathf.Approximately(transform.rotation.eulerAngles.z, 180))
+        {
+            ItemSelect.transform.localPosition = new Vector3(-1.5f,  0, 0);
+            ItemSelect.transform.localRotation = Quaternion.Euler(0, 0, -180);
+        }
+        else if (Mathf.Approximately(transform.rotation.eulerAngles.z, 270))
+        {
+            ItemSelect.transform.localPosition = new Vector3(0,  1.5f, 0);
+            ItemSelect.transform.localRotation = Quaternion.Euler(0, 0, 90);
+        }
     }
 
     IEnumerator Spawn()
