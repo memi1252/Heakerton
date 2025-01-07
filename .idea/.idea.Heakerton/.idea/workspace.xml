@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ae89254-f282-4768-bd1c-23510a076ace" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heakerton/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heakerton/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ProductionMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ProductionMachine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/image/settlebutton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/image/settlebutton.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ProductionMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ProductionMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +96,7 @@
       <updated>1736238059622</updated>
       <workItem from="1736238061704" duration="3804000" />
       <workItem from="1736255922928" duration="325000" />
+      <workItem from="1736270178857" duration="295000" />
     </task>
     <servers />
   </component>
