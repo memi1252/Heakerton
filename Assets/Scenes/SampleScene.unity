@@ -64196,6 +64196,7 @@ MonoBehaviour:
   Generator: {fileID: 3846203485437944985, guid: 58a25238cf8306145b38ff9c647432a6, type: 3}
   Recycle: {fileID: 7985719400908587547, guid: 70b51a18133356c4a9cb093acbb9f3cf, type: 3}
   T: {fileID: 2269310613998364760, guid: f03f6d34cf10f2c4e9ee27d7f7f11a3f, type: 3}
+  cc: {fileID: 7938068597917818461, guid: 63eef37090c5fb645a79eadaf7e10c92, type: 3}
   ConveyorBeltHover: {fileID: 6458010247986210582, guid: 5ad6a5e90419663418cf367a872aef26, type: 3}
   ConveyorBeltRightHover: {fileID: 5435490559334256564, guid: 6fb9329a48cb1d448a4bf0b88b09a201, type: 3}
   ConveyorBeltLeftHover: {fileID: 5435490559334256564, guid: 683a4fb1c3492a54a82c84fa52a10070, type: 3}
@@ -64203,6 +64204,7 @@ MonoBehaviour:
   GeneratorHover: {fileID: 4792217554429701862, guid: aaf6c528841a1e749aeec8d865f6992a, type: 3}
   RecycleHover: {fileID: 3993052215616844217, guid: db187c03e9bcbf34fa857449ff9a4b0e, type: 3}
   THover: {fileID: 7930345720194036302, guid: c59a6b32ba5179c44856bfbfd10f684e, type: 3}
+  ccHover: {fileID: 7808691622840290851, guid: 86a6685e970a0d144bd0a15e26d78397, type: 3}
   DeleteObject: {fileID: 8823056054357976473, guid: 30f915b3b15cdcb4a85dbb4cd2670a04, type: 3}
   mousePosition: {x: 0, y: 0}
   spawnObejct: {fileID: 0}

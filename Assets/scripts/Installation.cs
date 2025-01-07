@@ -14,6 +14,7 @@ public class Installation : MonoBehaviour
     [SerializeField] public GameObject Generator;
     [SerializeField] public GameObject Recycle;
     [SerializeField] public GameObject T;
+    [SerializeField] public GameObject cc;
 
 
     [SerializeField] public GameObject ConveyorBeltHover;
@@ -23,6 +24,7 @@ public class Installation : MonoBehaviour
     [SerializeField] public GameObject GeneratorHover;
     [SerializeField] public GameObject RecycleHover;
     [SerializeField] public GameObject THover;
+    [SerializeField] public GameObject ccHover;
 
     [SerializeField] public GameObject DeleteObject;
 
@@ -98,6 +100,7 @@ public class Installation : MonoBehaviour
             case 4: selectedObject = GeneratorHover; spawnObejct = Generator; break;
             case 5: selectedObject = RecycleHover; spawnObejct = Recycle; break;
             case 6: selectedObject = THover; spawnObejct = T; break;
+            case 7: selectedObject = ccHover; spawnObejct = cc; break;
         }
         followObject = Instantiate(selectedObject, mousePosition, selectedObject.transform.rotation);
     }
