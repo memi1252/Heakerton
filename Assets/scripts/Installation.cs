@@ -70,9 +70,11 @@ public class Installation : MonoBehaviour
                     followObject.transform.position = hit.collider.transform.position;
                     if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("ConveyorBelt"))
                     {
+                        gameManager.money -= 5;
                         Destroy(hit.transform.gameObject);
                     }else if(Input.GetMouseButtonDown(0) && hit.collider.CompareTag("child"))
                     {
+                        gameManager.money -= 5;
                         Destroy(hit.transform.parent.gameObject);
                     }
                 }

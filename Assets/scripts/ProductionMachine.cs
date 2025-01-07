@@ -26,9 +26,13 @@ public class ProductionMachine : MonoBehaviour
     [SerializeField] private TextMeshPro motorCountText;
     [SerializeField] private TextMeshPro ElectricWireCountText;
     [SerializeField] private TextMeshPro filterCountText;
-    
-    private bool wait = false;
 
+    GameManager gameManager;
+    private bool wait = false;
+    private void Start()
+    {
+        gameManager = GameObject.FindWithTag("gamemanager").GetComponent<GameManager>();
+    }
     private void Update()
     {
         if (outputItem == outputItems[0])
@@ -101,6 +105,7 @@ public class ProductionMachine : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(0.7f);
+        gameManager.energy -= 3;
         wait = false;
     }
 

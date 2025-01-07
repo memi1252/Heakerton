@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,15 +13,18 @@ public class GameManager : MonoBehaviour
     public float money;
     public float energy;
     public State state;
+    public int[] ingres;
     private void Awake()
     {
         money  = 500;
+        energy = 500;
         state = State.place;
         if (GameObject.FindWithTag("gamemanager") != gameObject)
         {
             Destroy(gameObject);
         }
         else DontDestroyOnLoad(gameObject);
+        StartCoroutine(energyuse());
     }
     private void Update()
     {
@@ -32,5 +36,11 @@ public class GameManager : MonoBehaviour
         {
             Camera.main.transform.GetComponent<Physics2DRaycaster>().enabled = true;
         }
+    }
+    IEnumerator energyuse()
+    {
+        energy-=GameObject.FindGameObjectsWithTag("ConveyorBelt").Length*2;
+        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(energyuse());
     }
 }

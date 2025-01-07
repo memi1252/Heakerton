@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7159275146003831170}
   - component: {fileID: 4279112665666854736}
   - component: {fileID: 237370287987629478}
+  - component: {fileID: 8719169552113623771}
   m_Layer: 0
   m_Name: AirPurifier
   m_TagString: filter
@@ -162,3 +163,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8719169552113623771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097936709090039710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc403ae478379044eae6f9f7f5541237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

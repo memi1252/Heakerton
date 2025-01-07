@@ -13,6 +13,7 @@ TagManager:
   - battery
   - ElectricWire
   - child
+  - Trash
   layers:
   - Default
   - TransparentFX
