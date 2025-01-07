@@ -11,10 +11,14 @@ public class Installation : MonoBehaviour
     [SerializeField] public GameObject ConveyorBeltRight;
     [SerializeField] public GameObject ConveyorBeltLeft;
     [SerializeField] public GameObject ProductionMachine;
+    [SerializeField] public GameObject Generator;
+
+
     [SerializeField] public GameObject ConveyorBeltHover;
     [SerializeField] public GameObject ConveyorBeltRightHover;
     [SerializeField] public GameObject ConveyorBeltLeftHover;
     [SerializeField] public GameObject ProductionMachineHover;
+    [SerializeField] public GameObject GeneratorHover;
 
     [SerializeField] public GameObject DeleteObject;
 
@@ -85,6 +89,7 @@ public class Installation : MonoBehaviour
             case 1: selectedObject = ConveyorBeltRightHover; spawnObejct = ConveyorBeltRight; break;
             case 2: selectedObject = ConveyorBeltLeftHover; spawnObejct = ConveyorBeltLeft; break;
             case 3: selectedObject = ProductionMachineHover; spawnObejct = ProductionMachine; break;
+            case 4: selectedObject = GeneratorHover; spawnObejct = Generator; break;
         }
         followObject = Instantiate(selectedObject, mousePosition, selectedObject.transform.rotation);
     }
