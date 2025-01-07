@@ -17,14 +17,17 @@ public class Store : MonoBehaviour
     }
     public void buy(int num)
     {
-        switch (num)
+        if (gameManager.money >=(num / 2 + 1)*10||num==4&& gameManager.money>=15)
         {
-            case 0:gameManager.money -= 10 ; break;
-            case 1: gameManager.money -= 10; break;
-            case 2: gameManager.money -= 20; break;
-            case 3: gameManager.money -= 20; break;
-            case 4: gameManager.money -= 15; break;
+            switch (num)
+            {
+                case 0: gameManager.money -= 10; break;
+                case 1: gameManager.money -= 10; break;
+                case 2: gameManager.money -= 20; break;
+                case 3: gameManager.money -= 20; break;
+                case 4: gameManager.money -= 15; break;
+            }
+            gameManager.ingres[num]++;
         }
-        gameManager.ingres[num]++;
     }
 }

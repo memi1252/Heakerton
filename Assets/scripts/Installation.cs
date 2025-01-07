@@ -74,14 +74,17 @@ public class Installation : MonoBehaviour
                 if (Delete)
                 {
                     followObject.transform.position = hit.collider.transform.position;
-                    if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("ConveyorBelt"))
+                    if(Input.GetMouseButtonDown(0) && gameManager.money >= 5)
                     {
                         gameManager.money -= 5;
-                        Destroy(hit.transform.gameObject);
-                    }else if(Input.GetMouseButtonDown(0) && hit.collider.CompareTag("child"))
-                    {
-                        gameManager.money -= 5;
-                        Destroy(hit.transform.parent.gameObject);
+                        if (hit.collider.CompareTag("ConveyorBelt"))
+                        {
+                            Destroy(hit.transform.gameObject);
+                        }
+                        else if (hit.collider.CompareTag("child"))
+                        {
+                            Destroy(hit.transform.parent.gameObject);
+                        }
                     }
                 }
             }
@@ -106,8 +109,8 @@ public class Installation : MonoBehaviour
     }
     public void delete()
     {
-        Delete = true;
         if (followObject != null) Destroy(followObject);
         followObject = Instantiate(DeleteObject, mousePosition, followObject.transform.rotation);
+        Delete = true;
     }
 }

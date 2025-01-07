@@ -29,11 +29,24 @@ public class ProductionMachine : MonoBehaviour
     [SerializeField] private TextMeshPro ElectricWireCountText;
     [SerializeField] private TextMeshPro filterCountText;
 
+    int trashcount;
     GameManager gameManager;
     private bool wait = false;
     private void Start()
     {
+        trashcount = 0;
         gameManager = GameObject.FindWithTag("gamemanager").GetComponent<GameManager>();
+        StartCoroutine(tttrash());
+    }
+    IEnumerator tttrash()
+    {
+        yield return new WaitForSeconds(1);
+        if (--trashcount >= 0)
+        {
+            Instantiate(trash, output2.transform.position, Quaternion.identity);
+        }
+        else trashcount = 0;
+        yield return StartCoroutine(tttrash());
     }
     private void Update()
     {
@@ -46,7 +59,7 @@ public class ProductionMachine : MonoBehaviour
                 ElectricWireCount--;
                 batteryCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
-                Instantiate(trash, output2.transform.position, Quaternion.identity);
+                trashcount+=2;
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -59,7 +72,7 @@ public class ProductionMachine : MonoBehaviour
                 batteryCount--;
                 motorCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
-                Instantiate(trash, output2.transform.position, Quaternion.identity);
+                trashcount+=2;
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -73,7 +86,7 @@ public class ProductionMachine : MonoBehaviour
                 batteryCount--;
                 ElectricWireCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
-                Instantiate(trash, output2.transform.position, Quaternion.identity);
+                trashcount+=2;
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -109,8 +122,7 @@ public class ProductionMachine : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(0.7f);
-        Instantiate(trash, output2.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1.5f);
         gameManager.energy -= 3;
         wait = false;
     }

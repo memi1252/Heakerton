@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator energyuse()
     {
-        energy-=GameObject.FindGameObjectsWithTag("ConveyorBelt").Length*2;
+        energy-=GameObject.FindGameObjectsWithTag("ConveyorBelt").Length/2;
         yield return new WaitForSeconds(1);
         yield return StartCoroutine(energyuse());
     }

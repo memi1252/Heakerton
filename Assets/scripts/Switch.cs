@@ -28,6 +28,7 @@ public class Switch : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         stay = false;
+        swi = !swi;
         if (swi)
         {
             transform.GetChild(0).gameObject.SetActive(true);
@@ -38,6 +39,5 @@ public class Switch : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(true);
         }
-        swi = !swi;
     }
 }
