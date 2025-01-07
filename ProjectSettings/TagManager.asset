@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tilte
   - ConveyorBelt
+  - gamemanager
   layers:
   - Default
   - TransparentFX
