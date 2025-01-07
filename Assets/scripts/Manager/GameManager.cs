@@ -9,16 +9,19 @@ public enum State
 };
 public class GameManager : MonoBehaviour
 {
+    public float money;
+    public float energy;
     public State state;
     private void Awake()
     {
+        money  = 500;
         state = State.place;
         if (GameObject.FindWithTag("gamemanager") != gameObject)
         {
             Destroy(gameObject);
         }
         else DontDestroyOnLoad(gameObject);
-    }//if (!EventSystem.current.IsPointerOverGameObject ())
+    }
     private void Update()
     {
         if (state == State.place)

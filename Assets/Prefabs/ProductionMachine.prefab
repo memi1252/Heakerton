@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 3534778186649754873}
   m_Layer: 0
   m_Name: view
-  m_TagString: Untagged
+  m_TagString: child
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

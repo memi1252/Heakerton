@@ -12,6 +12,7 @@ TagManager:
   - motor
   - battery
   - ElectricWire
+  - child
   layers:
   - Default
   - TransparentFX

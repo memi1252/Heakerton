@@ -16,6 +16,7 @@ public class Installation : MonoBehaviour
     [SerializeField] public GameObject ConveyorBeltLeftHover;
     [SerializeField] public GameObject ProductionMachineHover;
 
+    [SerializeField] public GameObject DeleteObject;
 
     private Camera mainCamera;
     public Vector2 mousePosition;
@@ -23,9 +24,11 @@ public class Installation : MonoBehaviour
     public GameObject spawnObejct;
     public GameObject followObject;
     GameManager gameManager;
+    bool Delete;
 
     private void Awake()
     {
+        Delete = false;
         gameManager = GameObject.FindWithTag("gamemanager").GetComponent<GameManager>();
         mainCamera = Camera.main;
     }
@@ -51,10 +54,22 @@ public class Installation : MonoBehaviour
                 if (followObject != null)
                 {
                     followObject.transform.position = hit.collider.transform.position;
-                    if (Input.GetMouseButtonDown(0) && !hit.collider.CompareTag("ConveyorBelt"))
+                    if (Input.GetMouseButtonDown(0) && !hit.collider.CompareTag("ConveyorBelt")&&!Delete)
                     {
                         var obejct = Instantiate(spawnObejct, hit.collider.transform.position, followObject.transform.rotation);
-                        hit.collider.gameObject.SetActive(false);
+                    }
+                }
+            }else
+            {
+                if (Delete)
+                {
+                    followObject.transform.position = hit.collider.transform.position;
+                    if (Input.GetMouseButtonDown(0) && hit.collider.CompareTag("ConveyorBelt"))
+                    {
+                        Destroy(hit.transform.gameObject);
+                    }else if(Input.GetMouseButtonDown(0) && hit.collider.CompareTag("child"))
+                    {
+                        Destroy(hit.transform.parent.gameObject);
                     }
                 }
             }
@@ -62,6 +77,7 @@ public class Installation : MonoBehaviour
     }
     public void setObject(int num)
     {
+        Delete = false;
         if(followObject!=null)Destroy(followObject);
         switch (num)
         {
@@ -71,5 +87,11 @@ public class Installation : MonoBehaviour
             case 3: selectedObject = ProductionMachineHover; spawnObejct = ProductionMachine; break;
         }
         followObject = Instantiate(selectedObject, mousePosition, selectedObject.transform.rotation);
+    }
+    public void delete()
+    {
+        Delete = true;
+        if (followObject != null) Destroy(followObject);
+        followObject = Instantiate(DeleteObject, mousePosition, followObject.transform.rotation);
     }
 }
