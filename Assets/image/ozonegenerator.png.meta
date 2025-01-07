@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d94c5ff9a76e279448a59c7f09bde9ae
+guid: 236fda4129bed714cb067523b547d04a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8545054547995483049
-    second: 23e8491cea083395_0
+      213: -3068896167525746505
+    second: ozonegenerator_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 370
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 23e8491cea083395_0
+      name: ozonegenerator_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
-        width: 54
-        height: 54
+        x: 159
+        y: 109
+        width: 322
+        height: 402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 754a468892ed96980800000000000000
-      internalID: -8545054547995483049
+      spriteID: 7b8f11202371965d0800000000000000
+      internalID: -3068896167525746505
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      23e8491cea083395_0: -8545054547995483049
+      ozonegenerator_0: -3068896167525746505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
