@@ -692,6 +692,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7244886467641474950}
   m_maskType: 0
+--- !u!1 &4022439120461322448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7153228780858182049}
+  m_Layer: 0
+  m_Name: output2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7153228780858182049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022439120461322448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6847170684442010334}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4089903630897882685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2071,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7296596529736229428}
+  - {fileID: 7153228780858182049}
   - {fileID: 189044397361187717}
   - {fileID: 11307201914789}
   m_Father: {fileID: 0}
@@ -2088,7 +2120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1780848108713379649, guid: a396195750409da47a8ed3c737ed17c5, type: 3}
+  m_Sprite: {fileID: 1780848108713379649, guid: 9f41da3e9945454408fbd7cc0e8d4068, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2112,11 +2144,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   output: {fileID: 5383381667732123596}
+  output2: {fileID: 4022439120461322448}
   outputItem: {fileID: 856293830473722709, guid: 07e2f1ffb8bc4c5448d3a18d4f4bbed8, type: 3}
   outputItems:
   - {fileID: 856293830473722709, guid: 07e2f1ffb8bc4c5448d3a18d4f4bbed8, type: 3}
   - {fileID: 7097936709090039710, guid: 1f2124434460d5c4896f15bcbb847ca5, type: 3}
   - {fileID: 2537182002532636823, guid: ef6412a819e49d14aa2393a37b663f9f, type: 3}
+  trash: {fileID: 1169067994534459686, guid: e3f393a23b3d49b4bafa140e11b02e5f, type: 3}
   ItmeSprites:
   - {fileID: -5636343253877202797, guid: 0b3d7fbf59881334ca69127c6e174c5d, type: 3}
   - {fileID: 4258969373002904346, guid: a90a6e87ba573474783770237258cb01, type: 3}
@@ -2262,7 +2296,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

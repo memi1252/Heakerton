@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GeneratorScript : MonoBehaviour
+public class funnelsc : MonoBehaviour
 {
     GameManager gameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,10 +16,17 @@ public class GeneratorScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Trash"))
+        if (other.gameObject.CompareTag("spring"))
         {
-            Destroy(other.gameObject);
-            gameManager.energy += 20;
+            gameManager.items[0]++;   
+        }else if (other.gameObject.CompareTag("air"))
+        {
+            gameManager.items[1]++;
         }
+        else if (other.gameObject.CompareTag("ozon"))
+        {
+            gameManager.items[2]++;
+        }
+        Destroy(other.gameObject);
     }
 }

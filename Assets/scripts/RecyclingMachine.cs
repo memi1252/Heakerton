@@ -16,10 +16,13 @@ public class RecyclingMachine : MonoBehaviour
     [SerializeField] private int TrashCount = 0;
     
     [SerializeField] private TextMeshPro TrashCountText;
-    
-    
-    private bool wait = false;
 
+    GameManager gameManager;
+    private bool wait = false;
+    private void Start()
+    {
+        gameManager = GameObject.FindWithTag("gamemanager").GetComponent<GameManager>();
+    }
     private void Update()
     {
         if (outputItem == outputItems[0])
@@ -83,6 +86,7 @@ public class RecyclingMachine : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(0.7f);
+        gameManager.energy -= 1;
         wait = false;
     }
 

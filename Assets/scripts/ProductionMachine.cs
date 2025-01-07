@@ -7,9 +7,11 @@ using UnityEngine.EventSystems;
 public class ProductionMachine : MonoBehaviour
 {
     [SerializeField] private GameObject output;
-    
+    [SerializeField] private GameObject output2;
+
     [SerializeField] private GameObject outputItem;
     [SerializeField] private GameObject[] outputItems;
+    [SerializeField] private GameObject trash;
 
     [SerializeField] private Sprite[] ItmeSprites;
     [SerializeField] private GameObject ItemView;
@@ -44,6 +46,7 @@ public class ProductionMachine : MonoBehaviour
                 ElectricWireCount--;
                 batteryCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
+                Instantiate(trash, output2.transform.position, Quaternion.identity);
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -56,6 +59,7 @@ public class ProductionMachine : MonoBehaviour
                 batteryCount--;
                 motorCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
+                Instantiate(trash, output2.transform.position, Quaternion.identity);
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -69,6 +73,7 @@ public class ProductionMachine : MonoBehaviour
                 batteryCount--;
                 ElectricWireCount--;
                 Instantiate(outputItem, output.transform.position, Quaternion.identity);
+                Instantiate(trash, output2.transform.position, Quaternion.identity);
                 wait = true;
                 StartCoroutine(Spawn());
             }
@@ -105,6 +110,7 @@ public class ProductionMachine : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(0.7f);
+        Instantiate(trash, output2.transform.position, Quaternion.identity);
         gameManager.energy -= 3;
         wait = false;
     }

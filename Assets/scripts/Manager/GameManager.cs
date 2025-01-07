@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public float energy;
     public State state;
     public int[] ingres;
+    public int[] items;
     private void Awake()
     {
         money  = 500;

@@ -5,7 +5,8 @@ public enum Count
 {
     energy,
     money,
-    ingre
+    ingre,
+    item
 }
 public class count : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class count : MonoBehaviour
             case Count.energy:num=gameManager.energy; break;
             case Count.money: num = gameManager.money; break;
             case Count.ingre: num = gameManager.ingres[l]; break;
+            case Count.item: num = gameManager.items[l]; break;
         }
         GetComponent<TMP_Text>().text = num.ToString("#,##0");
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4223006207037782256}
   - component: {fileID: 6970026743293277126}
   - component: {fileID: 1117300163969043884}
+  - component: {fileID: 4517397197903280899}
   m_Layer: 0
   m_Name: Generator
   m_TagString: ConveyorBelt
@@ -134,3 +135,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.12944126}
   m_EdgeRadius: 0
+--- !u!114 &4517397197903280899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3846203485437944985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c565bbcf508b94eadd1dd595a7cf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
