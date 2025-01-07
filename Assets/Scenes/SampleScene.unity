@@ -62914,7 +62914,7 @@ MonoBehaviour:
   ConveyorBelt: {fileID: 6458010247986210582, guid: 9d2467286b430b14fbc153080c363b5f, type: 3}
   ConveyorBeltRight: {fileID: 5435490559334256564, guid: f2b1e4b6581b4cf4e8a942725fa0f6c9, type: 3}
   ConveyorBeltLeft: {fileID: 5435490559334256564, guid: dcf8d8ca3135ac64c88dc557a8c88f59, type: 3}
-  ProductionMachine: {fileID: 7985719400908587547, guid: 405d564010486d04db03c2a78231d429, type: 3}
+  ProductionMachine: {fileID: 7985719400908587547, guid: 4dccc95771a869d47a16188a5ea0a63c, type: 3}
   Generator: {fileID: 3846203485437944985, guid: 58a25238cf8306145b38ff9c647432a6, type: 3}
   ConveyorBeltHover: {fileID: 6458010247986210582, guid: 5ad6a5e90419663418cf367a872aef26, type: 3}
   ConveyorBeltRightHover: {fileID: 5435490559334256564, guid: 6fb9329a48cb1d448a4bf0b88b09a201, type: 3}
