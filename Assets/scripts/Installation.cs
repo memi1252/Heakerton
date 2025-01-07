@@ -10,29 +10,37 @@ public class Installation : MonoBehaviour
     [SerializeField] public GameObject ConveyorBelt;
     [SerializeField] public GameObject ConveyorBeltRight;
     [SerializeField] public GameObject ConveyorBeltLeft;
+    [SerializeField] public GameObject ProductionMachine;
     [SerializeField] public GameObject ConveyorBeltHover;
     [SerializeField] public GameObject ConveyorBeltRightHover;
     [SerializeField] public GameObject ConveyorBeltLeftHover;
-    
-    
+    [SerializeField] public GameObject ProductionMachineHover;
+
+
     private Camera mainCamera;
     public Vector2 mousePosition;
     GameObject selectedObject;
     public GameObject spawnObejct;
     public GameObject followObject;
+    GameManager gameManager;
 
     private void Awake()
     {
+        gameManager = GameObject.FindWithTag("gamemanager").GetComponent<GameManager>();
         mainCamera = Camera.main;
     }
 
     private void Update()
     {
+        if (gameManager.state == State.watch)
+        {
+            selectedObject = null;
+            Destroy(followObject);
+        }
         if (Input.GetKeyDown(KeyCode.R) && followObject != null)
         {
             followObject.transform.Rotate(0, 0, -90);
         }
-        
         mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit;
         hit = Physics2D.Raycast(mousePosition, Vector2.zero);
@@ -40,14 +48,12 @@ public class Installation : MonoBehaviour
         {
             if (hit.collider.CompareTag("tilte"))
             {
-                if(followObject != null)
+                if (followObject != null)
                 {
                     followObject.transform.position = hit.collider.transform.position;
                     if (Input.GetMouseButtonDown(0) && !hit.collider.CompareTag("ConveyorBelt"))
                     {
                         var obejct = Instantiate(spawnObejct, hit.collider.transform.position, followObject.transform.rotation);
-                        //selectedObject = null;
-                        //Destroy(followObject);
                         hit.collider.gameObject.SetActive(false);
                     }
                 }
@@ -62,7 +68,7 @@ public class Installation : MonoBehaviour
             case 0: selectedObject = ConveyorBeltHover; spawnObejct = ConveyorBelt; break;
             case 1: selectedObject = ConveyorBeltRightHover; spawnObejct = ConveyorBeltRight; break;
             case 2: selectedObject = ConveyorBeltLeftHover; spawnObejct = ConveyorBeltLeft; break;
-            case 3: selectedObject = ConveyorBeltHover; spawnObejct = ConveyorBelt; break;
+            case 3: selectedObject = ProductionMachineHover; spawnObejct = ProductionMachine; break;
         }
         followObject = Instantiate(selectedObject, mousePosition, selectedObject.transform.rotation);
     }
