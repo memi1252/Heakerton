@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,6 +20,12 @@ public class ProductionMachine : MonoBehaviour
     [SerializeField] private int motorCount = 0;
     [SerializeField] private int ElectricWireCount = 0;
     [SerializeField] private int filterCount = 0;
+    
+    [SerializeField] private TextMeshPro ScrewCountText;
+    [SerializeField] private TextMeshPro batteryCountText;
+    [SerializeField] private TextMeshPro motorCountText;
+    [SerializeField] private TextMeshPro ElectricWireCountText;
+    [SerializeField] private TextMeshPro filterCountText;
     
     private bool wait = false;
 
@@ -62,6 +69,12 @@ public class ProductionMachine : MonoBehaviour
                 StartCoroutine(Spawn());
             }
         }
+        
+        ScrewCountText.text = ScrewCount.ToString();
+        batteryCountText.text = batteryCount.ToString();
+        motorCountText.text = motorCount.ToString();
+        ElectricWireCountText.text = ElectricWireCount.ToString();
+        filterCountText.text = filterCount.ToString();
     }
 
     IEnumerator Spawn()
